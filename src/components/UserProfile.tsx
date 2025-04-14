@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { User } from "@/data/mockData";
-import { Grid, Bookmark, Tag } from "lucide-react";
+import { Grid, Bookmark, Tag, Heart, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface UserProfileProps {
@@ -25,7 +24,6 @@ export default function UserProfile({ user, postsCount = 0, posts }: UserProfile
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      {/* Profile header */}
       <div className="flex flex-col md:flex-row items-center md:items-start mb-8">
         <div className="w-24 h-24 md:w-36 md:h-36 mr-0 md:mr-10 mb-6 md:mb-0">
           <img 
@@ -70,7 +68,6 @@ export default function UserProfile({ user, postsCount = 0, posts }: UserProfile
         </div>
       </div>
       
-      {/* Tab navigation */}
       <div className="border-t border-gray-200">
         <div className="flex justify-center">
           <button 
@@ -112,7 +109,6 @@ export default function UserProfile({ user, postsCount = 0, posts }: UserProfile
         </div>
       </div>
       
-      {/* Photo grid */}
       <div className="grid grid-cols-3 gap-1 mt-1">
         {posts.map((image, index) => (
           <div key={index} className="aspect-square relative group">
